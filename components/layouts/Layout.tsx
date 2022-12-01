@@ -7,7 +7,7 @@ interface Props {
     keywords?: string
 }
 
-export const Layout:FC<PropsWithChildren<Props>> = ({ children, title, pageDescription, imageFullUrl, keywords = "tomihq blog, programming blog, learn javascript, clean code javascript, good community" }) => {
+const Layout:FC<PropsWithChildren<Props>> = ({ children, title, pageDescription, imageFullUrl, keywords = "tomihq blog, programming blog, learn javascript, clean code javascript, good community" }) => {
   return (
     <>
         <Head>
@@ -41,3 +41,4 @@ export const Layout:FC<PropsWithChildren<Props>> = ({ children, title, pageDescr
     </>
   )
 }
+export default Layout;

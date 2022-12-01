@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
-import { Layout } from '../components/layouts'
+import dynamic from 'next/dynamic';
 import { IGift } from '../interfaces'
 import { GIFTS } from '../utils'
+
+const Layout = dynamic(() => import("../components/layouts/Layout"));
 const HomePage: NextPage = () => {
 
   return (
