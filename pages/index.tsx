@@ -13,9 +13,9 @@ const HomePage: NextPage = () => {
                 <ol className='flex flex-col justify-center items-center'>
                     {GIFTS.map(({slug, name, emoji}:IGift) =>{
                         return (
-                           <div className='bg-white w-56 h-8 flex items-center justify-center gap-1 rounded-xl mt-3'>
+                           <div key={slug} className='bg-white w-56 h-8 flex items-center justify-center gap-1 rounded-xl mt-3'>
                              <label htmlFor={slug}> {emoji} </label>
-                             <li className="text-black text-center" id={slug}  key={slug}>{name}</li>
+                             <li className="text-black text-center" id={slug}>{name}</li>
                            </div>
                         )
                     })}
