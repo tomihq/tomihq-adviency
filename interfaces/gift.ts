@@ -1,5 +1,5 @@
 export interface IGift {
-    slug: string;
+    id: number;
     name: string;
     emoji: string;
 }

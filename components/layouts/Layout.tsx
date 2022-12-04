@@ -30,7 +30,7 @@ const Layout:FC<PropsWithChildren<Props>> = ({ children, title, pageDescription,
         {/* <SideMenu/> */}
 
         <main className='
-                 max-w-2xl xl:max-w-4xl border-gray-200  mx-auto pt-5 pb-8 
+                 max-w-md xl:max-w-md border-gray-200  mx-auto pt-5 pb-8 
                  sm:pb-0 bg-opacity-60 dark:text-gray-100'>
             {children}
         </main>
