@@ -14,8 +14,8 @@ const HomePage: NextPage = () => {
   const handleAddGifts = (gift: any) =>{
      const newGift = {
       id: gifts.length+1,
-      name: gift,
-      emoji: ''
+      name: gift.gift,
+      emoji: gift.emoji || ""
      }
      setGifts(current => [...current, newGift ]) 
   }
