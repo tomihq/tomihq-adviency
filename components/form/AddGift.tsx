@@ -23,10 +23,11 @@ export const AddGift = ({addGift}:AddGift) => {
   }
 
   const handleOpenEmojiPicker = () => setOpenEmojiPicker(!openEmojiPicker);
+  
   const handleAddGift = () => {
     addGift({gift, emoji: emoji.emoji});
     setEmoji("");
-    
+    setGift("");
     if (inputRef.current !== null) {
         inputRef.current.value = "";
     }
@@ -40,7 +41,7 @@ export const AddGift = ({addGift}:AddGift) => {
             {
                 emoji && <p className='inline-block absolute mt-1 ml-4'> {emoji.emoji} </p> 
             }
-            <input ref={inputRef} type="text" className='rounded-xl text-dark text-center h-8 w-56' placeholder='Regalo que desees' onChange={(e)=>setGift(e.target.value)}/> 
+            <input ref={inputRef} type="text" className='rounded-xl text-black text-center h-8 w-56' placeholder='Regalo que desees' onChange={(e)=>setGift(e.target.value)}/> 
             <button className='bg-gray-700 rounded-xl w-8 h-8' onClick={()=>handleOpenEmojiPicker()}>🔎</button>
         </div>
             {
