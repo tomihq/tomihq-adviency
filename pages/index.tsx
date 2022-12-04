@@ -20,6 +20,12 @@ const HomePage: NextPage = () => {
      setGifts(current => [...current, newGift ]) 
   }
 
+  const handleRemoveGifts = (id: number) =>{
+    setGifts(gifts.filter((gift: IGift)=>{
+      return gift.id !== id;
+    })) 
+  }
+
   return (
     <>
       <Layout title={'Inicio'} pageDescription={'La página principal que muestra los regalos que quieras'}>
@@ -28,7 +34,7 @@ const HomePage: NextPage = () => {
                 <h2 className='text-3xl text-red-600 text-center'><strong>Regalos</strong></h2>
                 <ol className='flex flex-col justify-center items-center'>
                   {gifts.map((gift:IGift) =>{
-                    return <ListItem key={gift.id} gift={gift}/>
+                    return <ListItem key={gift.id} gift={gift} removeGift={handleRemoveGifts} />
                   })}
                 </ol>
             </section>
