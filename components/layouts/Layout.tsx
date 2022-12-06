@@ -31,7 +31,7 @@ const Layout:FC<PropsWithChildren<Props>> = ({ children, title, pageDescription,
 
         <main className='
                  max-w-md xl:max-w-md border-gray-200  mx-auto pt-5 pb-8 
-                 sm:pb-0 bg-opacity-60 dark:text-gray-100'>
+                 sm:pb-0 bg-opacity-60 dark:text-gray-100 bg-stone-800 h-screen'>
             {children}
         </main>
 

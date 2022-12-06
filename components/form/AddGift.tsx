@@ -25,6 +25,9 @@ export const AddGift = ({addGift}:AddGift) => {
   const handleOpenEmojiPicker = () => setOpenEmojiPicker(!openEmojiPicker);
   
   const handleAddGift = () => {
+    if(gift.length>20){
+      return alert("El regalo debe tener menos de 20 caracteres");
+    }
     addGift({gift, emoji: emoji.emoji});
     setEmoji("");
     setGift("");

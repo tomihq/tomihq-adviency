@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="es">
         <Head />
-        <body>
+        <body className="bg-[url('/christmas.jpg')]">
           <Main />
           <NextScript />
         </body>
